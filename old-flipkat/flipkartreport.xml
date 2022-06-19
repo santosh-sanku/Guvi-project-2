@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="143.693" timestamp="2022-06-16T16:38:29.829706" hostname="DESKTOP-LK9LNU7"><testcase classname="test_sample" name="test_firefox_url" time="45.518" /><testcase classname="test_sample" name="test_annualized" time="0.015" /><testcase classname="test_sample" name="test_annualized_1" time="0.007" /><testcase classname="test_sample" name="test_firefox_url_1" time="93.084"><failure message="AssertionError: assert 'Laptop- Buy ... Flipkart.com' == 'Mobiles- Buy... Flipkart.com'&#10;  - Mobiles- Buy Products Online at Best Price in India - All Categories | Flipkart.com&#10;  ? ^ ^^^^^&#10;  + Laptop- Buy Products Online at Best Price in India - All Categories | Flipkart.com&#10;  ? ^^^^ ^">@pytest.mark.fourth
+    def test_firefox_url_1():
+        web_driver = webdriver.Firefox()
+        web_driver.get("https://www.flipkart.com/search?q=mobiles&amp;otracker=search&amp;otracker1=search&amp;marketplace=FLIPKART&amp;as-show=on&amp;as=off&amp;p%5B%5D=facets.internal_storage%255B%255D%3D128%2B-%2B255.9%2BGB&amp;p%5B%5D=facets.network_type%255B%255D%3D4G&amp;p%5B%5D=facets.ram%255B%255D%3D6%2BGB&amp;sort=price_asc&amp;page=1")
+    
+        web_driver.maximize_window()
+    
+        title = "Laptop- Buy Products Online at Best Price in India - All Categories | Flipkart.com"
+&gt;       assert title ==  web_driver.title
+E       AssertionError: assert 'Laptop- Buy ... Flipkart.com' == 'Mobiles- Buy... Flipkart.com'
+E         - Mobiles- Buy Products Online at Best Price in India - All Categories | Flipkart.com
+E         ? ^ ^^^^^
+E         + Laptop- Buy Products Online at Best Price in India - All Categories | Flipkart.com
+E         ? ^^^^ ^
+
+test_sample.py:45: AssertionError</failure></testcase></testsuite></testsuites>
